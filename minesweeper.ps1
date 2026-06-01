@@ -230,12 +230,7 @@ while ($true) {
                             }
                         }
                     }
-                    'f' {  # Flag toggle
-                        if (-not $script:visible[$script:cursorRow, $script:cursorCol]) {
-                            $script:flagged[$script:cursorRow, $script:cursorCol] = -not $script:flagged[$script:cursorRow, $script:cursorCol]
-                        }
-                    }
-                    'F' {
+                    { $_ -in 'f','F' } {  # Flag toggle
                         if (-not $script:visible[$script:cursorRow, $script:cursorCol]) {
                             $script:flagged[$script:cursorRow, $script:cursorCol] = -not $script:flagged[$script:cursorRow, $script:cursorCol]
                         }
